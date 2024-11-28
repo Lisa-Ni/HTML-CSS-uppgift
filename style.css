@@ -7,14 +7,17 @@
 body {
     width: 100%;
     height: 100vh;
-    position: relative;
     background-color: rgb(43, 74, 79);
 
     font-family: "Montserrat", sans-serif;
 }
 
+.landingpage {
+    position: relative;
+}
 
-/* bakgrund och transparent grön box start sida*/
+
+/* bakgrund och transparent grön box, start sida*/
 .background-image {
     width: 100%;
     height: 100%;
@@ -43,13 +46,13 @@ body {
 /* nav bar */
 nav {
     position: fixed;
-    top: 0.5rem;
     left: 0;
 }
 
 .navbar {
     text-decoration: none;
     color: #FCF9ED;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin: 0.47rem;
 }
 
@@ -76,11 +79,6 @@ nav {
     box-shadow: 4px 4px 4px rgba(0, 0, 0,0.25);
 }
 
-h3 {
-    border: 2px solid yellow;
-    color: black;
-}
-
 .cabin-inside-sun {
     width: 50%;
     height: auto;
@@ -91,7 +89,94 @@ h3 {
     height: auto;
 }
 
+/* Bekvämligheter */
+/* grid */
+.bekv-page {
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-areas: 
+    "navbar"
+    "omoss"
+    "linje"
+    "bekv"
+    "footer";
+}
+
+
+/* navbar */
+.nav-bekv {
+    background-color: rgba(160,184,165,0.3);
+
+    grid-area: navbar;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.small-logo {
+    width: 10%;
+    height: auto;
+}
+
+.line {
+    grid-area: linje;
+}
+
+.bekv-img {
+    grid-area: bekv;
+}
+
+footer{
+    grid-area: footer;
+}
+
+/* first section, om oss and img */
+
+.omoss {
+    color: #FCF9ED;
+
+    grid-area: omoss;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cabin-8 {
+    width: 85%;
+    height: auto;
+    border: 5px solid #FCF9ED;
+    margin: 2rem;
+}
+
+
+.omoss h3 {
+    font-size: 2.813rem;
+    font-weight: 100;
+}
+
+.omoss p {
+    font-size: 1.2rem;
+    padding: 1rem;
+    line-height: 2.5rem;
+}
+
+.line {
+    width: 95%;
+    height: 3px;
+    margin-top: 0;
+    margin-left: 3%;
+    background: rgba(160,184,165);
+    border-radius: 3px;
+    box-shadow: 0 0 3px rgba(160, 184, 165, 0.5);
+}
+
+
+
 @media (min-width:1000px) {
+    
+    /* landingpage */
     .background-image {
         height: 100%;
     }
