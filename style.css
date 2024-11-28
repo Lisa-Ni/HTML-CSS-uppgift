@@ -3,3 +3,129 @@
     padding: 0;
     margin: 0;
 }
+
+body {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: rgb(43, 74, 79);
+
+    font-family: "Montserrat", sans-serif;
+}
+
+
+/* bakgrund och transparent grön box start sida*/
+.background-image {
+    width: 100%;
+    height: 100%;
+    background-image: url("/bilder/bonzai-assets/assets/photos/09-day.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 65% 0%;
+    background-size: cover;
+    position: absolute;
+    z-index: 0;
+}
+
+.green-box {
+    width: 70%;
+    height: 100%;
+    background-color: rgba(43,74,79,0.65);
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* nav bar */
+nav {
+    position: fixed;
+    top: 0.5rem;
+    left: 0;
+}
+
+.navbar {
+    text-decoration: none;
+    color: #FCF9ED;
+    margin: 0.47rem;
+}
+
+/* logga och knapp start sida */
+.img-logga {
+    width: 90%;
+    height: auto;
+    margin: 1rem;
+}
+
+.button-start {
+    width: 50%;
+    height: 5vh;
+    font-size: 1.25rem;
+}
+
+/* knapp */
+.button {
+    background-color: rgb(102,87,71);
+    color:#FCF9ED;
+    font-family: "Montserrat", sans-serif;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0,0.25);
+}
+
+h3 {
+    border: 2px solid yellow;
+    color: black;
+}
+
+.cabin-inside-sun {
+    width: 50%;
+    height: auto;
+}
+
+.cabin-fire-water {
+    width: 30%;
+    height: auto;
+}
+
+@media (min-width:1000px) {
+    .background-image {
+        height: 100%;
+    }
+
+    .img-logga {
+        width: 40%;
+    }
+
+    .button-start {
+        width: 20%;
+        height: 6vh;
+        font-size: 2rem;
+    }
+
+    .button-start:hover {
+        background-color:rgb(163,139,115)
+    }
+
+    .navbar {
+        font-size: 1.5rem;
+        margin: 2rem;
+    }
+
+    .navbar:hover {
+        color: rgb(43, 74, 79)
+    }
+
+    .cabin-inside-sun {
+        width: 80%;
+        height: auto;
+    }
+
+    .cabin-fire-water {
+        width: 30%;
+        height: auto;
+    }
+}
