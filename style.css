@@ -6,15 +6,15 @@
 
 body {
     width: 100%;
-    height: 100vh;
+    height: auto;
     background-color: rgb(43, 74, 79);
 
     font-family: "Montserrat", sans-serif;
     color: #fcf9ed;
 }
 
-                /* bakgrund och transparent grön box, start sida*/
-.background-image {
+/* bakgrund och transparent grön box, start sida*/
+.header-landing {
     width: auto;
     height: 100%;
     background-image: url("/HTML-CSS-uppgift/bilder/bonzai-assets/assets/photos/09-day.jpg");
@@ -23,7 +23,7 @@ body {
     background-size: cover;
 }
 
-.green-box {
+.header__green-box {
     width: 70%;
     height: 100vh;
     background-color: rgba(43, 74, 79, 0.65);
@@ -34,37 +34,42 @@ body {
     align-items: center;
 }
 
-                            /* nav bar */
-nav {
+/* nav bar */
+.header {
+    z-index: 10;
+    left: 0%;
+}
+
+.header-landing__nav {
     position: fixed;
     z-index: 10;
     left: 0;
     top: 0;
-    margin-top: 0.3rem;
+    margin-top: 0.5rem;
 }
 
-.navbar {
+.header__nav-link {
     text-decoration: none;
     color: #fcf9ed;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin: 0.47rem;
 }
 
-                    /* logga och knapp start sida */
-.img-logga {
-    width: 90%;
+/* logga och knapp startsida */
+.header__img-logga {
+    width: 80%;
     height: auto;
     margin: 1rem;
 }
 
-.button-start {
-    width: 50%;
+.header__button--start {
+    width: 100%;
     height: 5vh;
     font-size: 1.25rem;
 }
 
-                            /* knapp */
-.button {
+/* knapp */
+.header__button {
     background-color: rgb(102, 87, 71);
     color: #fcf9ed;
     font-family: "Montserrat", sans-serif;
@@ -73,21 +78,31 @@ nav {
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-                                    /* landingpage page2 */                                   
-.start-main h3{
+/* landingpage page2 */
+.main-start__description {
+    text-align: center;
+}
+
+.main-start__title {
     font-weight: 100;
     font-size: 2.1rem;
     margin: 2rem;
-    text-align: center;
 }
 
-.start-main p {
+.main-start__description-text {
     font-size: 1.5rem;
-    text-align: center;
     margin-bottom: 2%;
 }
 
-.start-img {
+.header__button--description {
+    width: 50%;
+    height: 6vh;
+    font-size: 1.25rem;
+    margin: 1rem;
+}
+
+.main-start__images {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -95,16 +110,16 @@ nav {
     margin-top: 30%;
     margin-bottom: 5%;
 }
-.cabin-inside-sun {
+
+.main-start__img-big {
     width: 200%;
-    height: auto;
-    border-bottom: 5px  solid #fcf9ed;
-    border-top: 5px  solid #fcf9ed;
+    border-bottom: 5px solid #fcf9ed;
+    border-top: 5px solid #fcf9ed;
 
     position: relative;
 }
 
-.cabin-fire-water {
+.main-start__img-small {
     width: 80%;
     height: auto;
     border: 5px solid #fcf9ed;
@@ -114,9 +129,9 @@ nav {
     z-index: 1;
 }
 
-                                    /* Bekvämligheter */
-                                    /* grid */
-.bekv-page {
+/* Bekvämligheter */
+/* grid */
+.bekv-body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
@@ -126,37 +141,39 @@ nav {
         "footer footer";
 }
 
-                                /* navbar */
-.nav-bekv {
-    background-color: rgba(160, 184, 165, 0.8);
+/* navbar */
+.bekv-body__header {
+    width: 100%;
+    background-color: rgba(102, 87, 71, 0.7);
 
     position: fixed;
+    top: 0;
     grid-area: navbar;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-evenly;
 
     z-index: 10;
-
 }
 
-.small-logo {
+.bekv-body__small-logo {
     width: 12%;
     height: auto;
     margin: 0.5rem;
+    
 }
 
 .main-bekv {
     grid-area: bekv;
 }
 
-footer {
+.footer {
     grid-area: footer;
 }
 
-                    /* first section, om oss and img */
+/* first section, om oss and img */
 
-.omoss {
+.main-bekv__omoss {
     grid-area: omoss;
 
     display: flex;
@@ -165,7 +182,7 @@ footer {
     align-items: center;
 }
 
-.cabin-8 {
+.main-bekv__cabin-8 {
     width: 85%;
     height: auto;
     border: 5px solid #fcf9ed;
@@ -173,24 +190,24 @@ footer {
     margin-top: 7rem;
 }
 
-.omoss_text {
+.main-bekv__omoss-text {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.omoss h3 {
+.main-bekv__title {
     font-size: 2.813rem;
     font-weight: 100;
 }
 
-.omoss p {
+.main-bekv__description {
     font-size: 1.2rem;
     padding: 1rem;
     line-height: 2.5rem;
 }
 
-                                    /* linje */
+/* linje */
 .line {
     width: 95%;
     height: 3px;
@@ -201,148 +218,317 @@ footer {
     box-shadow: 0 0 3px rgba(160, 184, 165, 0.5);
 }
 
-                                /* bilder på faciliteter */
+/* bilder på faciliteter */
 
-.bekv-img {
+.bekv-images {
     margin-bottom: 2rem;
 }
 
-.item_wrapper {
+.bekv-images__wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-}  
-                                
-.bekv-img img {
+}
+
+.bekv-images__img {
     width: 90%;
     height: auto;
     margin: 1rem;
     border: 5px solid #fcf9ed;
 }
 
-.bekv-img p {
+.bekv-images__text {
     font-size: 2.813rem;
     font-weight: 200;
     margin-top: -17px;
 }
 
-                                /* footer */
-footer {
+/* Våra Rum */
+
+.main {
+    width: 100%;
+    margin-top: 16%;
+}
+
+.options {
+    background-color: rgba(102, 87, 71, 0.7);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.options__booking {
+    background-color: #fcf9ed;
+    color: rgb(43, 74, 79);
+    width: 40%;
+    height: 4vh;
+    border-radius: 9px;
+    padding-left: 0.5rem;
+
+    display: flex;
+    align-items: center;
+}
+
+.options__button--web {
+    display: none;
+}
+
+.rooms {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rooms__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.rooms__img-one {
+    width: 90%;
+    height: 40vh;
+    object-fit: cover;
+    margin: 1rem;
+    border: 5px solid #fcf9ed;
+}
+
+.rooms__img {
+    width: 90%;
+    height: 40vh;
+    object-fit: cover;
+    margin: 1rem;
+    border: 5px solid #fcf9ed;
+}
+
+.rooms__title {
+    font-weight: 200;
+    font-size: 2.813rem;
+}
+
+.rooms__description {
+    margin-left: 1.5rem;
+    margin-right: 1rem;
+    line-height: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.options__button {
+    background-color: #A0B8A5;
+    color: rgb(43, 74, 79);
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 7px;
+    width: 50%;
+    height: 5vh;
+    margin: 1rem;
+}
+
+
+
+/* footer */
+.footer {
     background-color: rgba(102, 87, 71, 0.75);
     padding: 1rem;
+    margin-top: 1rem;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-footer p {
+.footer__email {
     font-size: 1rem;
 
 }
 
-.icons a {
+.footer__icons {
     color: #fcf9ed;
     padding: 0.5rem;
 }
 
 @media (min-width: 1000px) {
 
-                                /* landingpage */
-    .background-image {
+    /* landingpage */
+    .header-landing {
         height: 100%;
     }
 
-    .img-logga {
+    .header__img-logga {
         width: 40%;
     }
 
-    .button-start {
+    .header__button {
         width: 20%;
         height: 6vh;
         font-size: 2rem;
     }
 
-    .button-start:hover {
+    .header__button:hover {
         background-color: rgb(163, 139, 115);
     }
 
-    .navbar:hover {
+    .header__button--description {
+        width: 40%;
+        height: 6vh;
+        font-size: 2rem;
+        margin: 1rem;
+    }
+
+    .header__nav-link:hover {
         color: rgb(43, 74, 79);
     }
 
-    .cabin-inside-sun {
-        width: 80%;
-        height: auto;
+    .main-start {
+        display: flex;
+        margin-top: 1rem;
     }
 
-    .cabin-fire-water {
-        width: 30%;
-        height: auto;
+    .main-start__description {
+        margin: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
     }
 
-                             /* Bekvämligheter */
+    .main-start__images {
+        display: flex;
+        flex-direction: row;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
 
-                                /* Navbar */
-    .nav-bekv {
+    .main-start__img-big {
+        width: 110vh;
+        height: 90vh;
+        object-fit: cover;
+        border-left: 5px solid #fcf9ed;
+
+        position: relative;
+    }
+
+    .main-start__img-small {
+        width: 50vh;
+        height: 50vh;
+        object-fit: cover;
+
+        transform: translate3d(-70%, 30%, 0);
+        z-index: 1;
+        position: absolute;
+    }
+
+    /* Bekvämligheter */
+
+    /* Navbar */
+    .bekv-body__header {
         width: 100%;
-        justify-content: flex-end;
+        justify-content: space-between;
 
     }
 
-    .small-logo {
+    .bekv-body__small-logo {
         width: 3%;
         height: auto;
     }
 
-                                /* section Om oss */
-    .omoss {
+    /* section Om oss */
+    .main-bekv__omoss {
         flex-direction: row-reverse;
         margin-right: 5rem;
         margin-left: 5rem;
     }
 
-    .cabin-8 {
+    .main-bekv__cabin-8 {
         width: 55%;
         height: auto;
     }
 
-    .omoss_text {
+    .main-bekv__omoss-text {
         align-items: flex-start;
     }
 
-    .omoss_text h3 {
+    .main-bekv__title {
         margin-left: 1rem;
     }
-                            /* bilder o text på faciliteter */
-    .bekv-img {
+
+    /* bilder o text på faciliteter */
+    .bekv-images {
         margin-bottom: 10%;
 
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .item_wrapper {
+    .bekv-images__wrapper {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
 
-    .img_one {
+    .img-one {
         z-index: 1;
         transform: translateX(20%);
     }
 
-    .img_two {
+    .img-two {
         z-index: 2;
         transform: translatey(25%);
     }
 
-    .img_three {
+    .img-three {
         z-index: 3;
         transform: translateX(-20%);
+    }
+
+    /* Våra Rum */
+
+    .main {
+        margin-top: 4%;
+    }
+
+    .options {
+        height: 9vh;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .options__button--web {
+        display: initial;
+
+        background-color: #A0B8A5;
+        color: rgb(43, 74, 79);
+        font-size: 1.25rem;
+        border: none;
+        border-radius: 7px;
+        width: 10%;
+        height: 5vh;
+        margin: 1rem;
+    }
+
+    .rooms {
+        flex-direction: row;
+        margin-left: 10%;
+        margin-right: 10%;
+    } 
+    
+    .rooms__img--smaller {
+        width: 31.5%;
+        height: 50vh;
+    }
+
+    .rooms__img {
+        width: 55%;
+        height: 50vh;
+        object-fit: initial;
+    }
+
+    .options__button {
+        display: none;
     }
 }

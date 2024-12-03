@@ -2,63 +2,63 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
   <title>Bekvämligheter</title>
-  <link rel="stylesheet" href="/HTML-CSS-uppgift/style.css" />
+  <link rel="stylesheet" href="/HTML-CSS-uppgift/style.css" >
   <script src="https://kit.fontawesome.com/a9049e75fc.js" crossorigin="anonymous"></script>
   <link
     href="https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&family=Gravitas+One&family=Handlee&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
-    rel="stylesheet" />
+    rel="stylesheet" >
 </head>
 
-<body class="bekv-page">
-  <header class="nav-bekv">
+<body class="bekv-body">
+  <header class="header bekv-body__header">
     <nav>
-      <a class="navbar" href="/HTML-CSS-uppgift/index.html">Hem</a>
-      <a class="navbar" href="">Bekvämligheter</a>
-      <a class="navbar" href="">Våra Rum</a>
+      <a  aria-label="Home-page" class="header__nav-link" href="/HTML-CSS-uppgift/landingpage/index.html">Hem</a>
+      <a  aria-label="Facilities" class="header__nav-link" href="/HTML-CSS-uppgift/bekvamligheter/index.html">Bekvämligheter</a>
+      <a  aria-label="Our.rooms" class="header__nav-link" href="/HTML-CSS-uppgift/boka/index.html">Våra Rum</a>
     </nav>
-    <img class="small-logo" src="/HTML-CSS-uppgift/bilder/bonzai-assets/assets/logo/bonz.ai-logo-white-portrait.png"
-      alt="small-logo" />
+    <img class="bekv-body__small-logo"
+      src="/HTML-CSS-uppgift/bilder/bonzai-assets/assets/logo/bonz.ai-logo-white-portrait.png" alt="small-logo" >
   </header>
   <main class="main-bekv">
-    <section class="omoss">
-      <img class="cabin-8" src="/HTML-CSS-uppgift/bilder/bonzai-assets/assets/photos/08-day.jpg"
-        alt="inside-cabin-daytime" />
-      <section class="omoss_text">
-        <h3>Om Oss</h3>
-        <p>
+    <div class="main-bekv__omoss">
+      <img class="main-bekv__cabin-8" src="/HTML-CSS-uppgift/bilder/bonzai-assets/assets/photos/08-day.jpg"
+        alt="inside-cabin-daytime" >
+      <section class="main-bekv__omoss-text">
+        <h3 class="main-bekv__title">Om Oss</h3>
+        <p class="main-bekv__description">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos
           accusantium delectus consequatur odio a amet harum, quidem magnam
           esse ea voluptatibus ipsa atque numquam id molestias laboriosam at
           totam veritatis!
         </p>
       </section>
-    </section>
+    </div>
     <div class="line"></div>
-    <section class="bekv-img">
-      <div class="item_wrapper img_one">
-        <img class="item overlap " src="/HTML-CSS-uppgift/bilder/restaurang.jpg" alt="restaurang" />
-        <p class="item">Restaurang</p>
+    <div class="bekv-images">
+      <div class="bekv-images__wrapper img-one">
+        <img class="bekv-images__img" src="/HTML-CSS-uppgift/bilder/restaurang.jpg" alt="restaurang" >
+        <p class="bekv-images__text">Restaurang</p>
       </div>
-      <div class="item_wrapper img_two">
-        <img class="item overlap " src="/HTML-CSS-uppgift/bilder/sauna.jpg" alt="sauna" />
-        <p class="item">Bastu</p>
+      <div class="bekv-images__wrapper img-two">
+        <img class="bekv-images__img" src="/HTML-CSS-uppgift/bilder/sauna.jpg" alt="sauna" >
+        <p class="bekv-images__text">Bastu</p>
       </div>
-      <div class="item_wrapper img_three">
-        <img class="item overlap " src="/HTML-CSS-uppgift/bilder/spa.jpg" alt="spa" />
-        <p class="item">Massage</p>
+      <div class="bekv-images__wrapper img-three">
+        <img class="bekv-images__img" src="/HTML-CSS-uppgift/bilder/spa.jpg" alt="spa" >
+        <p class="bekv-images__text">Massage</p>
       </div>
-    </section>
+    </div>
   </main>
-  <footer>
-    <p>bonz.ai@email.com</p>
-    <section class="icons">
-      <a href="#tiktok"><i class="fa-brands fa-tiktok fa-2xl"></i></a>
-      <a href="#instagram"><i class="fa-brands fa-instagram fa-2xl"></i></a>
-      <a href="#facebook"><i class="fa-brands fa-facebook-f fa-2xl"></i></a>
-    </section>
+  <footer class="footer">
+    <p class="footer__email">bonz.ai@email.com</p>
+    <div class="footer__icons">
+      <a aria-label="Tiktok" href="#tiktok"><i class="fa-brands fa-tiktok fa-2xl footer__icons"></i></a>
+      <a aria-label="Instagram" href="#instagram"><i class="fa-brands fa-instagram fa-2xl footer__icons"></i></a>
+      <a aria-label="Facebook" href="#facebook"><i class="fa-brands fa-facebook-f fa-2xl footer__icons"></i></a>
+    </div>
   </footer>
 </body>
 
